@@ -15,10 +15,10 @@ class Test08(unittest.TestCase):
         cls.mod = importlib.import_module(f"{formatted_day}.{formatted_day}")
 
     def test_part1(self):
-        self.assertEqual(runner.run_part("1", self.mod, self.data), None)
+        self.assertEqual(runner.run_part("1", self.mod, self.data), 21)
 
     def test_part2(self):
-        self.assertEqual(runner.run_part("2", self.mod, self.data), None)
+        self.assertEqual(runner.run_part("2", self.mod, self.data), 8)
 
 
 if __name__ == '__main__':

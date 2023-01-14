@@ -34,11 +34,7 @@ def get_heuristic(total_gas_vented, steps, max_flow, max_time):
 
 
 def get_heuristic_part2(total_gas_vented, steps, max_flow, max_time, flow_rate_opened_valves_new):
-    # return total_gas_vented / steps
     return max_flow-flow_rate_opened_valves_new
-    # return (total_gas_vented + (max_flow * (max_time - steps)))
-    # return (total_gas_vented + (max_flow * (max_time - steps))) + extra_to_add
-    # return -1 * ((total_gas_vented + extra_to_add) // steps)
 
 
 def is_valid(open_valves, gas_vented, combo, visited, new_steps, max_flow_rate, max_time, max_vented,
@@ -49,17 +45,10 @@ def is_valid(open_valves, gas_vented, combo, visited, new_steps, max_flow_rate, 
 
     r = max_time - new_steps
     heuristic = (max_flow_rate-flow_rate_opened_valves_new) / (gas_vented + (max_flow_rate * r))
-    # heuristic = (gas_vented + (max_flow_rate * (max_time - new_steps)))
     potential_flow_rate_left = heuristic + new_steps
-    # valves_left_to_open = valves_to_open - len(open_valves)
     if (key1 in visited and visited[key1] > potential_flow_rate_left) \
             or (key2 in visited and visited[key2] > potential_flow_rate_left) \
             or (key1 not in visited and key2 not in visited):
-
-        # if ((gas_vented + (max_flow_rate * (max_time - new_steps))) / max_time) > (max_vented / max_time):
-        #     return True, potential_flow_rate_left, key1
-        # if ((gas_vented + (max_flow_rate * (max_time - new_steps))) / max_time) > (max_vented / max_time):
-        # if (gas_vented + (max_flow_rate * r)) > max_vented:
 
         return True, potential_flow_rate_left, key1
 

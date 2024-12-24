@@ -20,9 +20,9 @@ def part1(data):
   mols = set()
   
   for k, v in replacements.items():
-    print(k, v)
+    # print(k, v)
     count = mol.count(k)
-    print(count)
+    # print(count)
     if count == 0:
       continue
     ind = [m.start() for m in re.finditer(k, mol)]

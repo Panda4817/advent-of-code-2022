@@ -1,4 +1,4 @@
-from intcode import IntcodeComputer
+from year2019.intcode.intcode import IntcodeComputer
 
 
 def part1(data):

@@ -7,7 +7,7 @@ def part1(data):
     length  = len(l)
     code_lens.append(length)
     mem_count = 0
-    print(l)
+    # print(l)
     skip = None
     for i in range(0, length):
       if (skip != None and i != skip):
@@ -25,7 +25,7 @@ def part1(data):
         mem_count += 1
         skip = i + 4
         
-    print(mem_count)
+    # print(mem_count)
     mem_lens.append(mem_count)
 
   return sum(code_lens) - sum(mem_lens)
@@ -38,7 +38,7 @@ def part2(data):
   for l in lst:
     length  = len(l)
     original_lens.append(length)
-    print(l)
+    # print(l)
     new_str = ""
     for i in range(1, length - 1):
       if l[i] == '\\':
@@ -50,6 +50,6 @@ def part2(data):
     new_str = '"\\"' + new_str + '\\""'
     new_length = len(new_str)
     code_lens.append(new_length)
-    print(new_str)
+    # print(new_str)
 
   return sum(code_lens) - sum(original_lens)

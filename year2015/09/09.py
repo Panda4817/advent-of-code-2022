@@ -8,7 +8,7 @@ def part1(data):
   from_to = {}
   for l in lst:
     parts = l.split()
-    print(parts)
+    # print(parts)
     if parts[0] not in places:
       places.append(parts[0])
     if parts[2] not in places:
@@ -18,8 +18,8 @@ def part1(data):
     if parts[2] not in from_to[parts[0]]:
       from_to[parts[0]][parts[2]] = int(parts[4])
   
-  for k, v in from_to.items():
-    print(k, v)
+  # for k, v in from_to.items():
+  #   print(k, v)
   
 
   length = len(places)

@@ -49,9 +49,3 @@ def part2(data):
       num += 1
 
   return num
-
-
-      
-      
-    
-  return num

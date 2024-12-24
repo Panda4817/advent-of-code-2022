@@ -51,7 +51,7 @@ def part2(data):
     pl2.append(int(l))
 
   def recurse(p1, p2):
-    print("recurse")
+    # print("recurse")
     rnds = {}
     rr = 1
     while(len(p1) > 0 and len(p2) > 0):

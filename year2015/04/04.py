@@ -19,7 +19,7 @@ def part2(data):
   x = 1
   found = False
   while(found == False):
-    print(x)
+    # print(x)
     str_2_hash = data + str(x)
     result = hashlib.md5(str_2_hash.encode())
     hex_hash = result.hexdigest()

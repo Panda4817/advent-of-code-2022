@@ -98,7 +98,7 @@ def part2(data):
   s = list("fbgdceah")
   for i in instructions:
     cp = copy.deepcopy(s)
-    print(i, cp)
+    # print(i, cp)
     if i[0] == "swap":
         if i[1] == "position":
             s = swap_position(i[2], i[5], cp)

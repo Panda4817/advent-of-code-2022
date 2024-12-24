@@ -44,8 +44,8 @@ def part1(data):
 
   totals = {}
   for i in info:
-    print(i)
-    print(info[i])
+    # print(i)
+    # print(info[i])
     totals[i] = info[i]['points']
   
   maxi = max(totals, key=lambda key: totals[key])

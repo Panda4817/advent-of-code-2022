@@ -8,7 +8,7 @@ def part1(data):
 
   for h in range(len(houses)):
     if houses[h] >= presents:
-      print(h, houses[h])
+      # print(h, houses[h])
       return h
       break
 

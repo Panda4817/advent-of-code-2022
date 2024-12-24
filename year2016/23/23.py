@@ -85,7 +85,7 @@ def part1(data):
     parts = instructions[index].split()
     if parts[0] == 'tgl':
       instructions = toggle(parts[1], instructions, index)
-      print(instructions)
+      # print(instructions)
     elif parts[0] == 'cpy':
       copy(parts[2], parts[1])
     elif parts[0] == 'inc':
@@ -116,7 +116,7 @@ def part2(data):
   while start_a != 13:
     subtraction = subtraction + factor
     end_a = end_a * start_a - subtraction
-    print(start_a, end_a, subtraction)
+    # print(start_a, end_a, subtraction)
     start_a += 1
   
   return end_a

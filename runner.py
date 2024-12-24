@@ -6,6 +6,8 @@ from typing import Any
 def format_filename(day: str):
     return day.zfill(2)
 
+def format_year(year: str):
+    return "year" + year
 
 def run_part(part: str, mod: Any, data: str):
     funcname = f'part{part}'
@@ -17,14 +19,14 @@ def run_part(part: str, mod: Any, data: str):
         return val
     else:
         print(f"No {funcname} function")
-        return
 
 
-def get_data(day, test=False):
+def get_data(day: str, year: str, test=False):
     # Try to find the filename
     day_module = format_filename(day)
+    year_module = format_year(year)
     fname = str(pathlib.Path(__file__).parent.absolute()) + \
-        "/" + day_module + "/" + day_module
+        "/" + year_module + "/" + day_module + "/" + day_module
 
     if test:
         fname += ".test.txt"
@@ -42,12 +44,13 @@ def get_data(day, test=False):
     return data
 
 
-def run(day, year=2022):
+def run(day, year):
     print(f"AOC {year} Day {day}")
 
     formatted_day = format_filename(day)
-    module = importlib.import_module(f"{formatted_day}.{formatted_day}")
-    data = get_data(day)
+    formatted_year = format_year(year)
+    module = importlib.import_module(f"{formatted_year}.{formatted_day}.{formatted_day}")
+    data = get_data(day, year)
     run_part("1", module, data)
     print()
     run_part("2", module, data)
